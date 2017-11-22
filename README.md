@@ -1,16 +1,24 @@
 # django-activity
 Activity/Task simple tracker and state persistence for Django
 
-Just clone or add as submodule in your project and link "activity" app directory
-in your Django project.
-Then add it to your INSTALLED_APPS
+You can install `django-activity` with `pip`
 
-If your Django project is called ''djproject''
-you could install the actvity app with:
+```
+pip install git+git://github.com/feroda/django-activity#egg=activity
+```
+(remember to add the dependency in your requirements.txt if you are using virtualenvs)
 
-  $ cd djproject
-  $ git submodule add https://github.com/feroda/django-activity.git
-  $ ln -s django-activity/activity activity
-  $ add the activity app to INSTALLED_APPS in djproject/settings.py
+add `activity` to `INSTALLED_APPS` in `settings.py`
 
-
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    ...
+    'activity',
+]
+```
